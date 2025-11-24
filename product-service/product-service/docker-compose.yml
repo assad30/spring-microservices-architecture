@@ -1,0 +1,14 @@
+version: '4'
+services:
+  mongodb:
+    image: mongo:7.0.5
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDG_ROOT_USERNAME: root
+      MONGO_INITDG_ROOT_PASSWORD: password
+      MONGO_INITDG_DATABASE: product-service
+
+    volumes:
+      - ./data:/data/db
